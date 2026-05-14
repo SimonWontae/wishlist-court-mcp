@@ -1,3 +1,4 @@
 mcp
 pydantic
 anyio<4.13
+python-pptx
