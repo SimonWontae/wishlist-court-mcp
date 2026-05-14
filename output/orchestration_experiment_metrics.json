@@ -1,0 +1,35 @@
+{
+  "single_agent": {
+    "simulated_token_count": 4200,
+    "simulated_latency_seconds": 18.2,
+    "tool_call_count": 12,
+    "failure_layer": "none",
+    "quality_score": 4
+  },
+  "planner_executor": {
+    "simulated_token_count": 6100,
+    "simulated_latency_seconds": 27.5,
+    "tool_call_count": 12,
+    "failure_layer": "none",
+    "quality_score": 5
+  },
+  "parallel_subagents": {
+    "simulated_token_count": 8900,
+    "simulated_latency_seconds": 23.4,
+    "tool_call_count": 16,
+    "failure_layer": "synthesis_overhead",
+    "quality_score": 4
+  },
+  "note": "실제 Hermes/OpenRouter 토큰 로그가 아니라 deterministic local runner 기준 simulation estimate다. 비교의 핵심은 절대값이 아니라 패턴별 상대적 차이다.",
+  "generated_files": [
+    "output/orchestration_single_agent_verdict.md",
+    "output/orchestration_planner_executor_plan.md",
+    "output/orchestration_planner_executor_verdict.md",
+    "output/orchestration_parallel_budget_agent.md",
+    "output/orchestration_parallel_duplicate_agent.md",
+    "output/orchestration_parallel_impulse_agent.md",
+    "output/orchestration_parallel_synthesized_verdict.md",
+    "output/orchestration_experiment_summary.md",
+    "output/orchestration_experiment_metrics.json"
+  ]
+}

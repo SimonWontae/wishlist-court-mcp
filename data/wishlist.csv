@@ -1,0 +1,6 @@
+item,price,category,reason,urgency,created_at
+HHKB 키보드,420000,keyboard,타건감이 좋아 보임,low,2026-05-01
+에어팟 맥스,790000,audio,카페에서 작업할 때 쓰고 싶음,medium,2026-05-04
+아이패드 미니,850000,tablet,논문 읽기용으로 좋아 보임,medium,2026-05-05
+USB-C 허브,39000,accessory,현재 허브가 자주 끊김,high,2026-05-06
+기계식 계산기,120000,toy,그냥 예뻐서 사고 싶음,low,2026-05-08

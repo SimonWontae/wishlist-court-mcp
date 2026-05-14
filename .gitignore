@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# OS/editor
+.DS_Store
+.idea/
+.vscode/
+
+# Secrets / local config
+.env
+*.env
+
+# Logs / caches
+*.log
+.cache/
+cache/
+
+# Hermes local runtime
+.hermes/
+.hermes/.env
+.hermes/logs/
+.hermes/cache/
+.hermes/sessions/
+.hermes/auth.json
+.hermes/auth.lock
+
+# Sandbox fallback git metadata
+.gitrepo/

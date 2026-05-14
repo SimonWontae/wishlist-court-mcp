@@ -1,0 +1,76 @@
+{
+  "environment": {
+    "runner": "experiments/run_local_experiments.py",
+    "mode": "local deterministic substitute for Hermes/Codex runs",
+    "wishlist_items": 5,
+    "owned_items": 5,
+    "remaining_budget": 120000,
+    "currency": "KRW"
+  },
+  "experiment_1": [
+    {
+      "condition": "MCP 없음",
+      "completed": true,
+      "latency_ms": 0.49,
+      "mcp_calls": 0,
+      "report": "output/no_mcp_verdict.md",
+      "accuracy_note": "보유품과 실제 예산을 모르는 조건이므로 정확도 낮음"
+    },
+    {
+      "condition": "정상 MCP",
+      "completed": true,
+      "latency_ms": 0.4,
+      "mcp_calls": 13,
+      "report": "output/good_mcp_verdict.md",
+      "accuracy_note": "정상 도구 결과와 판정 로직을 반영"
+    },
+    {
+      "condition": "망가진 MCP",
+      "completed": true,
+      "latency_ms": 0.33,
+      "mcp_calls": 13,
+      "report": "output/broken_mcp_verdict.md",
+      "accuracy_note": "의도적으로 잘못된 도구 결과 때문에 정확도 낮음"
+    }
+  ],
+  "experiment_2": [
+    {
+      "condition": "Single Agent",
+      "completed": true,
+      "latency_ms": 0.53,
+      "mcp_calls": 13,
+      "report": "output/single_agent_verdict.md",
+      "accuracy_note": "정상 도구 결과와 판정 로직을 반영"
+    },
+    {
+      "condition": "Planner+Executor",
+      "completed": true,
+      "latency_ms": 0.37,
+      "mcp_calls": 13,
+      "report": "output/planner_executor_verdict.md",
+      "accuracy_note": "정상 도구 결과와 판정 로직을 반영"
+    },
+    {
+      "condition": "Parallel sub-agent",
+      "completed": true,
+      "latency_ms": 0.36,
+      "mcp_calls": 14,
+      "report": "output/parallel_subagents_verdict.md",
+      "accuracy_note": "정상 도구 결과와 판정 로직을 반영"
+    }
+  ],
+  "verdict_summary": {
+    "no_mcp": {
+      "cooldown": 4,
+      "approve": 1
+    },
+    "good_mcp": {
+      "reject": 1,
+      "cooldown": 3,
+      "approve": 1
+    },
+    "broken_mcp": {
+      "approve": 5
+    }
+  }
+}
